@@ -1,0 +1,379 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>My Bookings - DabbaCartel</title>
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet"
+          href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="mybookings.css">
+    <link rel="stylesheet" href="../shared-layout.css">
+</head>
+
+<body>
+
+
+<aside class="sidebar">
+    <div class="logo-section">
+        <div class="logo-icon">
+            <img src="../logo.svg" alt="DabbaCartel Logo">
+        </div>
+        <div>
+            <h2>DabbaCartel</h2>
+            <p>No food waste, Just Goodness</p>
+        </div>
+    </div>
+    <nav class="sidebar-menu">
+        <a href="../Dashboard/dashboard.html" class="menu-item">
+            <i class="fa-solid fa-house"></i>
+            <span>Dashboard</span>
+        </a>
+        <a href="../listfood/listfood.html" class="menu-item">
+            <i class="fa-solid fa-circle-plus"></i>
+            <span>List food</span>
+        </a>
+        <a href="../mylisting/my-listings.html" class="menu-item">
+            <i class="fa-solid fa-cube"></i>
+            <span>My Listings</span>
+        </a>
+        <a href="../mybooking/mybookings.html" class="menu-item active">
+            <i class="fa-solid fa-box-open"></i>
+            <span>My Bookings</span>
+        </a>
+        <a href="../messages/messages.html" class="menu-item">
+            <i class="fa-regular fa-comment"></i>
+            <span>Messages</span>
+        </a>
+        <a href="../profile/profile.html" class="menu-item">
+            <i class="fa-regular fa-user"></i>
+            <span>Profile</span>
+        </a>
+        <a href="#logout" class="menu-item logout">
+            <i class="fa-solid fa-right-from-bracket"></i>
+            <span>Logout</span>
+        </a>
+    </nav>
+</aside>
+
+
+<!-- ================= MAIN CONTENT ================= -->
+
+<main class="main-content">
+
+    <!-- HEADER -->
+
+    <header class="topbar">
+    <div class="welcome-section">
+        <button class="menu-button" type="button" aria-label="Toggle navigation">
+            <i class="fa-solid fa-bars"></i>
+        </button>
+        <div>
+            <h1>My Bookings</h1>
+            <p>Track your food bookings and pickup</p>
+        </div>
+    </div>
+    <div class="topbar-right">
+        <div class="notification">
+            <i class="fa-regular fa-bell"></i>
+        </div>
+        <div class="profile-image">
+            <i class="fa-solid fa-user"></i>
+        </div>
+    </div>
+</header>
+
+
+    <!-- ================= TABS ================= -->
+
+    <div class="booking-tabs">
+
+        <button class="tab active" data-tab="upcoming">
+            Upcoming(<span id="upcomingCount">2</span>)
+        </button>
+
+        <button class="tab" data-tab="completed">
+            Completed(<span id="completedCount">5</span>)
+        </button>
+
+        <button class="tab" data-tab="cancelled">
+            Cancelled(<span id="cancelledCount">1</span>)
+        </button>
+
+    </div>
+
+
+    <!-- ================= BOOKINGS ================= -->
+
+    <section class="booking-container">
+
+
+        <!-- BOOKING 1 -->
+
+        <div class="booking-card upcoming">
+
+            <div class="booking-top">
+                <div class="food-information">
+
+                    <h2>Dal Tadka</h2>
+
+                    <p class="food-type">
+                        Main Course · 15 People
+                    </p>
+
+                    <p>
+                        <i class="fa-solid fa-location-dot"></i>
+                        ChurchGate, Mumbai
+                    </p>
+
+                    <p>
+                        <i class="fa-regular fa-clock"></i>
+                        Listed on 29th May, 9PM
+                    </p>
+
+                </div>
+
+                <div class="booking-status">
+                    Confirmed
+                </div>
+
+                <button class="more-btn">
+                    <i class="fa-solid fa-ellipsis-vertical"></i>
+                </button>
+
+            </div>
+
+
+            <div class="booking-divider"></div>
+
+
+            <div class="ngo-section">
+
+                <div class="ngo-title">
+                    NGO/Volunteer
+                </div>
+
+                <div class="ngo-details">
+
+                    <div class="ngo-logo">
+                        <i class="fa-solid fa-hands-holding-circle"></i>
+                    </div>
+
+                    <div>
+
+                        <h3>PROUDINDIAN</h3>
+
+                        <p class="rating">
+                            ⭐ 4.8(108)
+                        </p>
+
+                    </div>
+
+                </div>
+
+
+                <div class="pickup">
+
+                    <p>Pickup instructions</p>
+
+                    <span>
+                        Gate no.2, ask for Ramesh
+                    </span>
+
+                </div>
+
+
+                <div class="card-buttons">
+
+                    <button class="contact-btn">
+                        Contact
+                    </button>
+
+                    <button class="details-btn">
+                        View Details
+                    </button>
+
+                </div>
+
+            </div>
+
+        </div>
+
+
+
+        <!-- BOOKING 2 -->
+
+        <div class="booking-card upcoming">
+
+            <div class="booking-top">
+                <div class="food-information">
+
+                    <h2>Paneer Butter Masala</h2>
+
+                    <p class="food-type">
+                        Main Course · 15 People
+                    </p>
+
+                    <p>
+                        <i class="fa-solid fa-location-dot"></i>
+                        ChurchGate, Mumbai
+                    </p>
+
+                    <p>
+                        <i class="fa-regular fa-clock"></i>
+                        Listed on 29th May, 9PM
+                    </p>
+
+                </div>
+
+                <div class="booking-status">
+                    Confirmed
+                </div>
+
+                <button class="more-btn">
+                    <i class="fa-solid fa-ellipsis-vertical"></i>
+                </button>
+
+            </div>
+
+
+            <div class="booking-divider"></div>
+
+
+            <div class="ngo-section">
+
+                <div class="ngo-title">
+                    NGO/Volunteer
+                </div>
+
+                <div class="ngo-details">
+
+                    <div class="ngo-logo">
+                        <i class="fa-solid fa-hands-holding-circle"></i>
+                    </div>
+
+                    <div>
+
+                        <h3>PROUDINDIAN</h3>
+
+                        <p class="rating">
+                            ⭐ 4.8(108)
+                        </p>
+
+                    </div>
+
+                </div>
+
+
+                <div class="pickup">
+
+                    <p>Pickup instructions</p>
+
+                    <span>
+                        Gate no.2, ask for Ramesh
+                    </span>
+
+                </div>
+
+
+                <div class="card-buttons">
+
+                    <button class="contact-btn">
+                        Contact
+                    </button>
+
+                    <button class="details-btn">
+                        View Details
+                    </button>
+
+                </div>
+
+            </div>
+
+        </div>
+
+
+        <!-- COMPLETED BOOKINGS -->
+
+        <div class="booking-card completed hidden">
+
+            <div class="booking-top">
+                <div class="food-information">
+
+                    <h2>Vegetable Biryani</h2>
+
+                    <p class="food-type">
+                        Main Course · 10 People
+                    </p>
+
+                    <p>
+                        <i class="fa-solid fa-location-dot"></i>
+                        Mumbai
+                    </p>
+
+                    <p>
+                        <i class="fa-regular fa-clock"></i>
+                        Completed on 25th May
+                    </p>
+
+                </div>
+
+                <div class="completed-status">
+                    Completed
+                </div>
+
+            </div>
+
+        </div>
+
+
+        <!-- CANCELLED BOOKINGS -->
+
+        <div class="booking-card cancelled hidden">
+
+            <div class="booking-top">
+                <div class="food-information">
+
+                    <h2>Rice & Dal</h2>
+
+                    <p class="food-type">
+                        Main Course · 8 People
+                    </p>
+
+                    <p>
+                        <i class="fa-solid fa-location-dot"></i>
+                        Mumbai
+                    </p>
+
+                    <p>
+                        <i class="fa-regular fa-clock"></i>
+                        Cancelled on 20th May
+                    </p>
+
+                </div>
+
+                <div class="cancelled-status">
+                    Cancelled
+                </div>
+
+            </div>
+
+        </div>
+
+
+    </section>
+
+</main>
+
+
+<!-- JavaScript -->
+
+<script src="mybookings.js"></script>
+
+<script src="../app.js"></script>
+</body>
+</html>

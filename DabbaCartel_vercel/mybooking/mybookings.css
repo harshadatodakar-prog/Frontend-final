@@ -1,0 +1,490 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background: #ffffff;
+    color: #111;
+}
+
+.sidebar {
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 270px;
+    height: 100vh;
+    background: linear-gradient(black, #1a1a1a);
+    color: white;
+    padding: 25px 18px;
+    overflow-y: auto;
+    transition: transform 0.28s ease, width 0.28s ease;
+}
+
+.logo-section {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    padding: 5px 10px 35px;
+}
+
+.logo-icon {
+    width: 80px;
+    height: 80px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: transparent;
+    border-radius: 12px;
+    flex-shrink: 0;
+    overflow: hidden;
+}
+
+.logo-icon img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 15px;
+}
+
+.logo-text h2 {
+    font-size: 25px;
+    color: white;
+    margin-top: 5px;
+}
+
+.sidebar-menu {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.sidebar-menu a {
+    height: 48px;
+    display: flex;
+    align-items: center;
+    gap: 17px;
+    padding: 0 20px;
+    color: #d8dde0;
+    text-decoration: none;
+    font-size: 16px;
+    border-radius: 10px;
+    transition: 0.2s;
+}
+
+.sidebar-menu a i {
+    width: 22px;
+    text-align: center;
+    font-size: 18px;
+}
+
+.sidebar-menu a:hover,
+.sidebar-menu a.active {
+    background: #536d1f;
+    color: white;
+}
+
+.sidebar-menu a.active i {
+    color: #20b8f4;
+}
+
+.sidebar-menu a.logout {
+    margin-top: 15px;
+}
+.main-content {
+    margin-left: 297px;
+    min-height: 100vh;
+    padding: 18px 32px;
+}
+
+
+.top-header {
+    height: 65px;
+    display: flex;
+    align-items: center;
+    width: 100%;
+}
+
+.menu-btn {
+    border: none;
+    background: transparent;
+    font-size: 27px;
+    cursor: pointer;
+    margin-right: 28px;
+}
+
+.page-heading h1 {
+    font-size: 20px;
+
+    font-weight: 600;
+}
+
+.page-heading p {
+    font-size: 14px;
+
+    margin-top: 4px;
+
+    color: #333;
+}
+
+.header-right {
+    margin-left: auto;
+
+    display: flex;
+    align-items: center;
+
+    gap: 22px;
+}
+
+.notification {
+    font-size: 24px;
+
+    cursor: pointer;
+}
+
+.profile-circle {
+    width: 38px;
+    height: 38px;
+
+    border-radius: 50%;
+
+    border: 1px solid #333;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    font-size: 18px;
+}
+
+.booking-tabs {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    margin-top: 18px;
+    margin-bottom: 10px;
+}
+
+.tab {
+    background: transparent;
+    border: none;
+    text-align: left;
+    padding: 12px 14px;
+    font-size: 19px;
+    font-weight: 600;
+    cursor: pointer;
+}
+
+.tab.active {
+    color: #111;
+}
+
+.booking-container {
+    max-width: 850px;
+}
+
+.booking-card {
+    position: relative;
+    width: 100%;
+    min-height: 335px;
+    border: 2px solid #d6d6d6;
+    border-radius: 20px;
+    margin-bottom: 14px;
+    overflow: hidden;
+    background: white;
+}
+
+.booking-card.completed,
+.booking-card.cancelled {
+    min-height: 0;
+}
+
+.booking-card.completed .booking-top,
+.booking-card.cancelled .booking-top {
+    min-height: 0;
+    padding-bottom: 20px;
+}
+
+
+.booking-top {
+    position: relative;
+    display: flex;
+    padding: 20px 28px 10px;
+    min-height: 150px;
+}
+
+.food-information {
+    padding-top: 8px;
+}
+
+.food-information h2 {
+    font-size: 21px;
+
+    margin-bottom: 5px;
+}
+
+.food-information p {
+    font-size: 16px;
+    margin: 8px 0;
+    color: #333;
+}
+
+.food-information i {
+    width: 20px;
+
+    margin-right: 3px;
+}
+
+.booking-status {
+    position: absolute;
+    top: 15px;
+    right: 45px;
+
+    padding: 8px 19px;
+    border: 2px solid #ddd;
+    border-radius: 12px;
+    color: #8c9400;
+    font-size: 18px;
+    background: white;
+}
+
+
+.more-btn {
+    position: absolute;
+    right: 10px;
+    bottom: 18px;
+    background: transparent;
+    border: none;
+    font-size: 22px;
+    cursor: pointer;
+}
+
+
+.booking-divider {
+    height: 1px;
+    background: #aaa;
+    margin: 0 25px;
+}
+
+.ngo-section {
+    position: relative;
+    padding: 12px 28px 15px;
+}
+
+.ngo-title {
+    font-size: 19px;
+    font-weight: 500;
+    margin-bottom: 12px;
+}
+
+.ngo-details {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin-left: 5px;
+}
+
+.ngo-logo {
+    width: 48px;
+    height: 48px;
+    border-radius: 50%;
+    background: #303030;
+    color: #39a7e8;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 20px;
+}
+
+.ngo-details h3 {
+    font-size: 19px;
+    font-weight: 500;
+}
+
+.rating {
+    font-size: 14px;
+    margin-top: 2px;
+}
+
+.pickup {
+    margin-left: 76px;
+    margin-top: 18px;
+}
+
+.pickup p {
+    font-size: 20px;
+    margin-bottom: 5px;
+}
+
+.pickup span {
+    font-size: 18px;
+    color: #555;
+}
+
+.card-buttons {
+    position: absolute;
+    right: 28px;
+    top: 12px;
+    display: flex;
+    flex-direction: column;
+    gap: 64px;
+}
+
+.contact-btn,
+.details-btn {
+    min-width: 108px;
+    padding: 8px 14px;
+    background: white;
+    border: 2px solid #ddd;
+    border-radius: 10px;
+    font-size: 17px;
+    cursor: pointer;
+    box-shadow: 0 1px 2px rgba(0,0,0,0.08);
+}
+
+.contact-btn {
+    color: #8c9400;
+}
+
+.contact-btn:hover,
+.details-btn:hover {
+    background: #f5f5f5;
+}
+
+
+/* ================= OTHER STATUSES ================= */
+
+.completed-status {
+    position: absolute;
+
+    right: 30px;
+    top: 25px;
+
+    padding: 8px 15px;
+
+    border-radius: 10px;
+
+    background: #e9f5e9;
+
+    color: green;
+}
+
+.cancelled-status {
+    position: absolute;
+
+    right: 30px;
+    top: 25px;
+
+    padding: 8px 15px;
+
+    border-radius: 10px;
+
+    background: #ffe9e9;
+
+    color: #c40000;
+}
+
+
+/* HIDDEN */
+
+.hidden {
+    display: none;
+}
+
+
+/* ================= RESPONSIVE ================= */
+
+@media screen and (max-width: 900px) {
+
+    .sidebar {
+        width: 230px;
+    }
+
+    .main-content {
+        margin-left: 230px;
+
+        padding: 15px;
+    }
+
+    .logo-text h2 {
+        font-size: 22px;
+    }
+
+    .logo-text p {
+        font-size: 13px;
+    }
+
+    .sidebar-menu a {
+        font-size: 16px;
+    }
+
+}
+
+
+@media screen and (max-width: 700px) {
+
+    .sidebar {
+        left: -297px;
+
+        transition: 0.3s;
+    }
+
+    .sidebar.show {
+        left: 0;
+    }
+
+    .main-content {
+        margin-left: 0;
+
+        padding: 15px;
+    }
+
+    .booking-tabs {
+        grid-template-columns: 1fr;
+    }
+
+    .booking-card {
+        min-height: auto;
+    }
+
+    .booking-top {
+        flex-wrap: wrap;
+    }
+
+    .food-information h2 {
+        font-size: 18px;
+    }
+
+    .booking-status {
+        position: static;
+
+        margin-left: auto;
+    }
+
+    .card-buttons {
+        position: static;
+
+        flex-direction: row;
+
+        margin-top: 20px;
+
+        justify-content: flex-end;
+    }
+
+    .pickup {
+        margin-left: 0;
+    }
+
+}
+.sidebar-hidden {
+    transform: translateX(-100%);
+}
+
+@media (min-width: 651px) {
+
+    .sidebar-hidden + .main-content {
+        margin-left: 0;
+    }
+
+}

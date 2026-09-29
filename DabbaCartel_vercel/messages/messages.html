@@ -1,0 +1,339 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <title>Messages - DabbaCartel</title>
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet"
+          href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+
+    <!-- CSS -->
+        <link rel="stylesheet"
+            href="messages.css">
+
+    <link rel="stylesheet" href="../shared-layout.css">
+</head>
+
+
+<body>
+
+
+<aside class="sidebar">
+    <div class="logo-section">
+        <div class="logo-icon">
+            <img src="../logo.svg" alt="DabbaCartel Logo">
+        </div>
+        <div>
+            <h2>DabbaCartel</h2>
+            <p>No food waste, Just Goodness</p>
+        </div>
+    </div>
+    <nav class="sidebar-menu">
+        <a href="../Dashboard/dashboard.html" class="menu-item">
+            <i class="fa-solid fa-house"></i>
+            <span>Dashboard</span>
+        </a>
+        <a href="../listfood/listfood.html" class="menu-item">
+            <i class="fa-solid fa-circle-plus"></i>
+            <span>List food</span>
+        </a>
+        <a href="../mylisting/my-listings.html" class="menu-item">
+            <i class="fa-solid fa-cube"></i>
+            <span>My Listings</span>
+        </a>
+        <a href="../mybooking/mybookings.html" class="menu-item">
+            <i class="fa-solid fa-box-open"></i>
+            <span>My Bookings</span>
+        </a>
+        <a href="../messages/messages.html" class="menu-item active">
+            <i class="fa-regular fa-comment"></i>
+            <span>Messages</span>
+        </a>
+        <a href="../profile/profile.html" class="menu-item">
+            <i class="fa-regular fa-user"></i>
+            <span>Profile</span>
+        </a>
+        <a href="#logout" class="menu-item logout">
+            <i class="fa-solid fa-right-from-bracket"></i>
+            <span>Logout</span>
+        </a>
+    </nav>
+</aside>
+
+
+
+<!-- ================= MAIN CONTENT ================= -->
+
+<main class="main-content">
+
+
+    <!-- TOP BAR -->
+
+    <header class="topbar">
+    <div class="welcome-section">
+        <button class="menu-button" type="button" aria-label="Toggle navigation">
+            <i class="fa-solid fa-bars"></i>
+        </button>
+        <div>
+            <h1>Messages</h1>
+            <p>Connect with donors, NGOs and Volunteers.</p>
+        </div>
+    </div>
+    <div class="topbar-right">
+        <div class="notification">
+            <i class="fa-regular fa-bell"></i>
+        </div>
+        <div class="profile-image">
+            <i class="fa-solid fa-user"></i>
+        </div>
+    </div>
+</header>
+
+
+
+    <!-- ================= SEARCH ================= -->
+
+    <div class="search-container">
+
+        <i class="fa-solid fa-magnifying-glass"></i>
+
+        <input
+            type="text"
+            id="searchMessages"
+            placeholder="Search messages....">
+
+    </div>
+
+
+
+    <!-- ================= FILTERS ================= -->
+
+    <div class="message-filters">
+
+
+        <button class="filter-btn active"
+                data-filter="all">
+
+            All
+
+        </button>
+
+
+        <button class="filter-btn"
+                data-filter="unread">
+
+            Unread
+
+        </button>
+
+
+        <button class="filter-btn"
+                data-filter="donor">
+
+            Donors
+
+        </button>
+
+
+        <button class="filter-btn"
+                data-filter="ngo">
+
+            NGOs
+
+        </button>
+
+
+        <button class="filter-btn"
+                data-filter="volunteer">
+
+            Volunte
+
+        </button>
+
+
+    </div>
+
+
+
+    <!-- ================= MESSAGE AREA ================= -->
+
+    <section class="messages-area">
+
+
+        <!-- Example message -->
+
+        <div class="message-card"
+             data-type="donor"
+             data-read="true">
+
+            <div class="message-avatar">
+
+                <i class="fa-solid fa-user"></i>
+
+            </div>
+
+
+            <div class="message-info">
+
+                <div class="message-header">
+
+                    <h3>Rahul Sharma</h3>
+
+                    <span>10:30 AM</span>
+
+                </div>
+
+
+                <p class="message-type">
+                    Donor
+                </p>
+
+
+                <p class="message-text">
+
+                    Thank you for sharing the food.
+                    We will arrange the pickup shortly.
+
+                </p>
+
+            </div>
+
+        </div>
+
+
+
+        <!-- Example message -->
+
+        <div class="message-card unread"
+             data-type="ngo"
+             data-read="false">
+
+            <div class="message-avatar">
+
+                <i class="fa-solid fa-building"></i>
+
+            </div>
+
+
+            <div class="message-info">
+
+                <div class="message-header">
+
+                    <h3>PROUDINDIAN NGO</h3>
+
+                    <span>09:45 AM</span>
+
+                </div>
+
+
+                <p class="message-type">
+                    NGO
+                </p>
+
+
+                <p class="message-text">
+
+                    We are interested in your food
+                    listing. Can we schedule a pickup?
+
+                </p>
+
+            </div>
+
+        </div>
+
+
+
+        <!-- Example message -->
+
+        <div class="message-card"
+             data-type="volunteer"
+             data-read="true">
+
+            <div class="message-avatar">
+
+                <i class="fa-solid fa-person"></i>
+
+            </div>
+
+
+            <div class="message-info">
+
+                <div class="message-header">
+
+                    <h3>Akash Patil</h3>
+
+                    <span>Yesterday</span>
+
+                </div>
+
+
+                <p class="message-type">
+                    Volunteer
+                </p>
+
+
+                <p class="message-text">
+
+                    I can help with the pickup
+                    from Andheri West.
+
+                </p>
+
+            </div>
+
+        </div>
+
+
+    </section>
+
+
+
+    <!-- ================= MESSAGE INPUT ================= -->
+
+    <div class="message-input-container">
+
+
+        <input
+            type="text"
+            id="messageInput"
+            placeholder="Type a message">
+
+
+        <button class="attachment-btn">
+
+            <i class="fa-solid fa-file-circle-plus"></i>
+
+        </button>
+
+
+        <button
+            class="send-btn"
+            id="sendMessage">
+
+            <i class="fa-solid fa-paper-plane"></i>
+
+        </button>
+
+
+    </div>
+
+
+</main>
+
+
+
+<script src="messages.js"></script>
+<script src="../shared-layout.js"></script>
+
+<script src="../app.js"></script>
+</body>
+
+</html>

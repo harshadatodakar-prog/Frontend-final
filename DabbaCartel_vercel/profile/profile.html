@@ -1,0 +1,327 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <title>Profile - DabbaCartel</title>
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet"
+          href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+
+    <!-- CSS -->
+    <link rel="stylesheet"
+          href="profile.css">
+
+    <link rel="stylesheet" href="../shared-layout.css">
+</head>
+
+
+<body>
+
+
+<!-- ================= SIDEBAR ================= -->
+
+<aside class="sidebar">
+    <div class="logo-section">
+        <div class="logo-icon">
+            <img src="../logo.svg" alt="DabbaCartel Logo">
+        </div>
+        <div>
+            <h2>DabbaCartel</h2>
+            <p>No food waste, Just Goodness</p>
+        </div>
+    </div>
+    <nav class="sidebar-menu">
+        <a href="../Dashboard/dashboard.html" class="menu-item">
+            <i class="fa-solid fa-house"></i>
+            <span>Dashboard</span>
+        </a>
+        <a href="../listfood/listfood.html" class="menu-item">
+            <i class="fa-solid fa-circle-plus"></i>
+            <span>List food</span>
+        </a>
+        <a href="../mylisting/my-listings.html" class="menu-item">
+            <i class="fa-solid fa-cube"></i>
+            <span>My Listings</span>
+        </a>
+        <a href="../mybooking/mybookings.html" class="menu-item">
+            <i class="fa-solid fa-box-open"></i>
+            <span>My Bookings</span>
+        </a>
+        <a href="../messages/messages.html" class="menu-item">
+            <i class="fa-regular fa-comment"></i>
+            <span>Messages</span>
+        </a>
+        <a href="../profile/profile.html" class="menu-item active">
+            <i class="fa-regular fa-user"></i>
+            <span>Profile</span>
+        </a>
+        <a href="#logout" class="menu-item logout">
+            <i class="fa-solid fa-right-from-bracket"></i>
+            <span>Logout</span>
+        </a>
+    </nav>
+</aside>
+
+
+
+<!-- ================= MAIN CONTENT ================= -->
+
+<main class="main-content">
+
+
+    <!-- TOP BAR -->
+
+    <header class="topbar">
+    <div class="welcome-section">
+        <button class="menu-button" type="button" aria-label="Toggle navigation">
+            <i class="fa-solid fa-bars"></i>
+        </button>
+        <div>
+            <h1>Profile</h1>
+            <p>View and manage your personal information</p>
+        </div>
+    </div>
+    <div class="topbar-right">
+        <div class="notification">
+            <i class="fa-regular fa-bell"></i>
+        </div>
+        <div class="profile-image">
+            <i class="fa-solid fa-user"></i>
+        </div>
+    </div>
+</header>
+
+
+
+    <!-- ================= PROFILE CARD ================= -->
+
+    <section class="profile-card">
+
+
+        <!-- PROFILE HEADER -->
+
+        <div class="profile-header">
+
+
+            <div class="profile-avatar">
+
+                <i class="fa-solid fa-user"></i>
+
+            </div>
+
+
+            <div class="profile-title">
+
+                <h2>Ganesh Lad</h2>
+
+                <p>Member since Jan 2026</p>
+
+                <span class="verified-member">
+
+                    Verified member
+
+                </span>
+
+            </div>
+
+
+        </div>
+
+
+
+        <!-- ================= PROFILE INFORMATION ================= -->
+
+        <div class="profile-information">
+
+
+            <!-- FULL NAME -->
+
+            <div class="profile-row">
+
+                <div class="profile-label">
+
+                    Full Name
+
+                </div>
+
+
+                <div class="profile-value">
+
+                    Ganesh Mukadam Lad
+
+                </div>
+
+
+                <button class="edit-btn"
+                        data-field="Full Name">
+
+                    Edit
+
+                </button>
+
+            </div>
+
+
+
+            <!-- EMAIL -->
+
+            <div class="profile-row">
+
+                <div class="profile-label">
+
+                    Email
+
+                </div>
+
+
+                <div class="profile-value email">
+
+                    Your login email
+
+                </div>
+
+
+                <button class="edit-btn"
+                        data-field="Email">
+
+                    Edit
+
+                </button>
+
+            </div>
+
+
+
+            <!-- PHONE -->
+
+            <div class="profile-row">
+
+                <div class="profile-label">
+
+                    Phone
+
+                </div>
+
+
+                <div class="profile-value">
+
+                    Your registered contact number
+
+                </div>
+
+
+                <div class="phone-status">
+
+                    <i class="fa-solid fa-check"></i>
+
+                    Verified
+
+                    <i class="fa-solid fa-chevron-down"></i>
+
+                </div>
+
+            </div>
+
+
+
+            <!-- LOCATION -->
+
+            <div class="profile-row">
+
+                <div class="profile-label">
+
+                    Location
+
+                </div>
+
+
+                <div class="profile-value">
+
+                    Panvel, Maharashtra
+
+                </div>
+
+
+                <button class="edit-btn"
+                        data-field="Location">
+
+                    Edit
+
+                </button>
+
+            </div>
+
+
+
+            <!-- WHO AM I -->
+
+            <div class="profile-row">
+
+                <div class="profile-label">
+
+                    Who am I
+
+                </div>
+
+
+                <div class="profile-value">
+
+                    Donor
+
+                </div>
+
+
+                <button class="edit-btn"
+                        data-field="Who am I">
+
+                    Edit
+
+                </button>
+
+            </div>
+
+
+
+            <!-- ABOUT ME -->
+
+            <div class="profile-row about-row">
+
+                <div class="profile-label">
+
+                    About Me
+
+                </div>
+
+
+                <div class="profile-value">
+
+                    Food lover and believer in sharing is caring
+
+                </div>
+
+            </div>
+
+
+        </div>
+
+    </section>
+
+
+</main>
+
+
+<!-- JavaScript -->
+
+<script src="profile.js"></script>
+
+<script src="../app.js"></script>
+</body>
+
+</html>

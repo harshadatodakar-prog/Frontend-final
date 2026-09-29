@@ -1,0 +1,751 @@
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+
+    background: #ffffff;
+
+    color: #222;
+
+    min-height: 100vh;
+}
+
+.sidebar {
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 270px;
+    height: 100vh;
+    background: linear-gradient(black, #1a1a1a);
+    color: white;
+    padding: 25px 18px;
+    overflow-y: auto;
+    transition: transform 0.28s ease, width 0.28s ease;
+}
+
+
+.logo-section {
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 10px;
+
+    margin-bottom: 35px;
+}
+
+
+.logo-icon {
+
+    width: 35px;
+
+    height: 55px;
+
+    display: flex;
+
+    justify-content: center;
+
+    align-items: center;
+}
+
+
+.logo-icon img {
+
+    width: 45px;
+
+    height: 55px;
+
+    object-fit: contain;
+}
+
+
+.logo-section h2 {
+
+    font-size: 27px;
+
+    color: white;
+
+    margin-bottom: 3px;
+}
+
+
+.logo-section p {
+
+    font-size: 14px;
+
+    color: #e7e7e7;
+}
+
+
+/* =========================================
+   SIDEBAR MENU
+========================================= */
+
+.sidebar-menu {
+
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 5px;
+}
+
+
+.menu-item {
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 16px;
+
+    padding: 12px;
+
+    border-radius: 10px;
+
+    color: white;
+
+    text-decoration: none;
+
+    font-size: 17px;
+
+    transition: 0.2s ease;
+}
+
+
+.menu-item i {
+
+    width: 20px;
+
+    text-align: center;
+
+    font-size: 21px;
+}
+
+
+.menu-item:hover {
+
+    background: rgba(255,255,255,0.1);
+}
+
+
+.menu-item.active {
+
+    background: #929c05;
+}
+
+
+.menu-item.logout {
+
+    margin-top: 20px;
+}
+
+
+/* =========================================
+   MAIN CONTENT
+========================================= */
+
+.main-content {
+
+    margin-left: 275px;
+
+    min-height: 100vh;
+
+    padding: 20px 50px;
+
+    position: relative;
+
+    padding-bottom: 100px;
+}
+
+
+/* =========================================
+   TOP BAR
+========================================= */
+
+.topbar {
+
+    height: 70px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: space-between;
+}
+
+
+.welcome-section {
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 20px;
+}
+
+
+.menu-button {
+
+    border: none;
+
+    background: none;
+
+    font-size: 25px;
+
+    cursor: pointer;
+
+    color: #222;
+}
+
+
+.welcome-section h1 {
+
+    font-size: 20px;
+
+    font-weight: 500;
+
+    margin-bottom: 4px;
+}
+
+
+.welcome-section p {
+
+    font-size: 12px;
+
+    color: #333;
+}
+
+
+.topbar-right {
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 25px;
+}
+
+
+.notification {
+
+    font-size: 23px;
+
+    cursor: pointer;
+}
+
+
+.profile-image {
+
+    width: 38px;
+
+    height: 38px;
+
+    background: #333;
+
+    border-radius: 50%;
+
+    color: white;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+}
+
+
+/* =========================================
+   SEARCH
+========================================= */
+
+.search-container {
+
+    width: 75%;
+
+    height: 42px;
+
+    margin: 12px auto 35px;
+
+    border: 2px solid #d8d8d8;
+
+    border-radius: 10px;
+
+    display: flex;
+
+    align-items: center;
+
+    padding: 0 18px;
+
+    box-shadow: 0 1px 3px rgba(0,0,0,0.08);
+}
+
+
+.search-container i {
+
+    font-size: 17px;
+
+    margin-right: 18px;
+
+    color: #222;
+}
+
+
+.search-container input {
+
+    border: none;
+
+    outline: none;
+
+    width: 100%;
+
+    font-size: 16px;
+
+    color: #333;
+}
+
+
+.search-container input::placeholder {
+
+    color: #555;
+}
+
+
+/* =========================================
+   FILTER BUTTONS
+========================================= */
+
+.message-filters {
+
+    width: 75%;
+
+    margin: 0 auto;
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 32px;
+
+    margin-bottom: 25px;
+}
+
+
+.filter-btn {
+
+    min-width: 95px;
+
+    padding: 7px 22px;
+
+    background: white;
+
+    border: 2px solid #d7d7d7;
+
+    border-radius: 25px;
+
+    font-size: 17px;
+
+    cursor: pointer;
+
+    transition: 0.2s;
+}
+
+
+.filter-btn:hover {
+
+    background: #f4f4f4;
+}
+
+
+.filter-btn.active {
+
+    background: #929c05;
+
+    color: white;
+
+    border-color: #929c05;
+}
+
+
+/* =========================================
+   MESSAGES AREA
+========================================= */
+
+.messages-area {
+
+    width: 75%;
+
+    margin: 0 auto;
+
+    min-height: 450px;
+
+    padding-bottom: 90px;
+}
+
+
+/* =========================================
+   MESSAGE CARD
+========================================= */
+
+.message-card {
+
+    display: flex;
+
+    gap: 15px;
+
+    padding: 18px;
+
+    border-bottom: 1px solid #eeeeee;
+
+    cursor: pointer;
+
+    transition: 0.2s;
+}
+
+
+.message-card:hover {
+
+    background: #fafafa;
+}
+
+
+.message-card.unread {
+
+    background: #f8f9e9;
+}
+
+
+/* =========================================
+   AVATAR
+========================================= */
+
+.message-avatar {
+
+    width: 48px;
+
+    height: 48px;
+
+    flex-shrink: 0;
+
+    border-radius: 50%;
+
+    background: #929c05;
+
+    color: white;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    font-size: 19px;
+}
+
+
+/* =========================================
+   MESSAGE INFORMATION
+========================================= */
+
+.message-info {
+
+    flex: 1;
+}
+
+
+.message-header {
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: space-between;
+}
+
+
+.message-header h3 {
+
+    font-size: 16px;
+
+    margin-bottom: 3px;
+}
+
+
+.message-header span {
+
+    color: #777;
+
+    font-size: 12px;
+}
+
+
+.message-type {
+
+    font-size: 12px;
+
+    color: #929c05;
+
+    margin-bottom: 7px;
+}
+
+
+.message-text {
+
+    font-size: 14px;
+
+    color: #555;
+
+    line-height: 1.4;
+}
+
+
+/* =========================================
+   MESSAGE INPUT
+========================================= */
+
+.message-input-container {
+
+    position: fixed;
+
+    bottom: 30px;
+
+    right: 40px;
+
+    width: 370px;
+
+    height: 42px;
+
+    border: 2px solid #d8d8d8;
+
+    border-radius: 12px;
+
+    background: white;
+
+    display: flex;
+
+    align-items: center;
+
+    padding-left: 15px;
+
+    box-shadow: 0 1px 3px rgba(0,0,0,0.08);
+}
+
+
+.message-input-container input {
+
+    flex: 1;
+
+    height: 100%;
+
+    border: none;
+
+    outline: none;
+
+    font-size: 14px;
+}
+
+
+.attachment-btn,
+.send-btn {
+
+    border: none;
+
+    background: transparent;
+
+    cursor: pointer;
+
+    width: 35px;
+
+    height: 35px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+}
+
+
+.attachment-btn {
+
+    color: #777;
+
+    font-size: 17px;
+}
+
+
+.send-btn {
+
+    color: #22c55e;
+
+    font-size: 19px;
+}
+
+
+/* =========================================
+   EMPTY MESSAGE
+========================================= */
+
+.empty-messages {
+
+    text-align: center;
+
+    padding: 100px 20px;
+
+    color: #777;
+}
+
+
+.empty-messages i {
+
+    font-size: 45px;
+
+    color: #929c05;
+
+    margin-bottom: 15px;
+}
+
+
+.empty-messages h3 {
+
+    color: #333;
+
+    margin-bottom: 7px;
+}
+
+
+/* =========================================
+   RESPONSIVE
+========================================= */
+
+@media (max-width: 900px) {
+
+    .sidebar {
+
+        width: 220px;
+    }
+
+
+    .main-content {
+
+        margin-left: 220px;
+
+        padding: 20px 25px;
+    }
+
+
+    .search-container,
+    .message-filters,
+    .messages-area {
+
+        width: 90%;
+    }
+
+}
+
+
+@media (max-width: 700px) {
+
+    .sidebar {
+
+        position: relative;
+
+        width: 100%;
+
+        height: auto;
+    }
+
+
+    .main-content {
+
+        margin-left: 0;
+
+        padding: 15px;
+    }
+
+
+    .sidebar-menu {
+
+        flex-direction: row;
+
+        flex-wrap: wrap;
+    }
+
+
+    .search-container,
+    .message-filters,
+    .messages-area {
+
+        width: 100%;
+    }
+
+
+    .message-filters {
+
+        gap: 8px;
+
+        flex-wrap: wrap;
+    }
+
+
+    .filter-btn {
+
+        min-width: auto;
+
+        font-size: 14px;
+    }
+
+
+    .message-input-container {
+
+        left: 15px;
+
+        right: 15px;
+
+        bottom: 15px;
+
+        width: auto;
+    }
+
+}
+
+
+@media (max-width: 450px) {
+
+    .logo-section h2 {
+
+        font-size: 22px;
+    }
+
+
+    .welcome-section h1 {
+
+        font-size: 17px;
+    }
+
+
+    .topbar-right {
+
+        gap: 10px;
+    }
+
+}
+.sidebar-hidden {
+    transform: translateX(-100%);
+}
+
+@media (min-width: 701px) {
+
+    .sidebar-hidden + .main-content {
+        margin-left: 0;
+    }
+
+}

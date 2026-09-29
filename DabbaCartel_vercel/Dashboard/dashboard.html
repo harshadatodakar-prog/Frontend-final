@@ -1,0 +1,351 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>DabbaCartel Dashboard</title>
+
+    
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+
+    
+    <link rel="stylesheet" href="dashboard.css">
+    <link rel="stylesheet" href="../shared-layout.css">
+</head>
+
+<body>
+
+
+    <aside class="sidebar">
+    <div class="logo-section">
+        <div class="logo-icon">
+            <img src="../logo.svg" alt="DabbaCartel Logo">
+        </div>
+        <div>
+            <h2>DabbaCartel</h2>
+            <p>No food waste, Just Goodness</p>
+        </div>
+    </div>
+    <nav class="sidebar-menu">
+        <a href="../Dashboard/dashboard.html" class="menu-item active">
+            <i class="fa-solid fa-house"></i>
+            <span>Dashboard</span>
+        </a>
+        <a href="../listfood/listfood.html" class="menu-item">
+            <i class="fa-solid fa-circle-plus"></i>
+            <span>List food</span>
+        </a>
+        <a href="../mylisting/my-listings.html" class="menu-item">
+            <i class="fa-solid fa-cube"></i>
+            <span>My Listings</span>
+        </a>
+        <a href="../mybooking/mybookings.html" class="menu-item">
+            <i class="fa-solid fa-box-open"></i>
+            <span>My Bookings</span>
+        </a>
+        <a href="../messages/messages.html" class="menu-item">
+            <i class="fa-regular fa-comment"></i>
+            <span>Messages</span>
+        </a>
+        <a href="../profile/profile.html" class="menu-item">
+            <i class="fa-regular fa-user"></i>
+            <span>Profile</span>
+        </a>
+        <a href="#logout" class="menu-item logout">
+            <i class="fa-solid fa-right-from-bracket"></i>
+            <span>Logout</span>
+        </a>
+    </nav>
+</aside>
+
+
+
+ <main class="main-content">
+
+
+<header class="topbar">
+    <div class="welcome-section">
+        <button class="menu-button" type="button" aria-label="Toggle navigation">
+            <i class="fa-solid fa-bars"></i>
+        </button>
+        <div>
+            <h1>Welcome back, ! 👋</h1>
+            <p>Together, let's reduce waste and feed more people.</p>
+        </div>
+    </div>
+    <div class="topbar-right">
+        <div class="notification">
+            <i class="fa-regular fa-bell"></i>
+        </div>
+        <div class="profile-image">
+            <i class="fa-solid fa-user"></i>
+        </div>
+    </div>
+</header>
+
+
+        <section class="impact-section" aria-labelledby="impact-title">
+            <div class="impact-heading">
+                <div>
+                    <span class="impact-kicker"><i class="fa-solid fa-leaf"></i> Our Impact</span>
+                    <h2 id="impact-title">Real food. Real people. A bigger tomorrow.</h2>
+                </div>
+                <span class="impact-period">All-time impact</span>
+            </div>
+
+            <div class="impact-grid">
+                <article class="impact-card impact-green">
+                    <div class="impact-icon"><i class="fa-solid fa-weight-hanging"></i></div>
+                    <div><strong data-impact="foodRescued">1,250 kg</strong><span>Kg of Food Rescued</span></div>
+                    <small><i class="fa-solid fa-arrow-trend-up"></i> Making surplus count</small>
+                </article>
+
+                <article class="impact-card impact-blue">
+                    <div class="impact-icon"><i class="fa-solid fa-utensils"></i></div>
+                    <div><strong data-impact="mealsRedistributed">3,420</strong><span>Meals Redistributed</span></div>
+                    <small><i class="fa-solid fa-arrow-trend-up"></i> More meals, less waste</small>
+                </article>
+
+                <article class="impact-card impact-orange">
+                    <div class="impact-icon"><i class="fa-solid fa-users"></i></div>
+                    <div><strong data-impact="donors">480</strong><span>Number of Donors</span></div>
+                    <small><i class="fa-solid fa-hand-holding-heart"></i> People sharing food</small>
+                </article>
+
+                <article class="impact-card impact-purple">
+                    <div class="impact-icon"><i class="fa-solid fa-building-ngo"></i></div>
+                    <div><strong data-impact="organizations">120</strong><span>Receiving Organizations</span></div>
+                    <small><i class="fa-solid fa-handshake"></i> Community partners</small>
+                </article>
+
+                <article class="impact-card impact-teal">
+                    <div class="impact-icon"><i class="fa-solid fa-handshake"></i></div>
+                    <div><strong data-impact="donations">620</strong><span>Successful Donations</span></div>
+                    <small><i class="fa-solid fa-circle-check"></i> Food reached people</small>
+                </article>
+
+                <article class="impact-card impact-red">
+                    <div class="impact-icon"><i class="fa-solid fa-seedling"></i></div>
+                    <div><strong data-impact="wasteReduced">1,250 kg</strong><span>Food Waste Reduced</span></div>
+                    <small><i class="fa-solid fa-leaf"></i> A lighter footprint</small>
+                </article>
+
+                <article class="impact-card impact-cyan">
+                    <div class="impact-icon"><i class="fa-solid fa-people-roof"></i></div>
+                    <div><strong data-impact="beneficiaries">8,900</strong><span>Estimated Beneficiaries Reached</span></div>
+                    <small><i class="fa-solid fa-heart"></i> Nourishing communities</small>
+                </article>
+            </div>
+        </section>
+
+        <section class="impact-banner">
+            <div class="impact-banner-copy">
+                <span>Turning Surplus into Smiles</span>
+                <h2>Good food deserves a second chance.</h2>
+                <p>DabbaCartel connects food donors with people in need, reducing food waste and creating measurable community impact.</p>
+                <a href="../listfood/listfood.html" class="impact-cta">Be a Part of the Change <i class="fa-solid fa-arrow-right"></i></a>
+            </div>
+            <div class="impact-illustration" aria-hidden="true">
+                <div class="leaf leaf-one"></div><div class="leaf leaf-two"></div><div class="leaf leaf-three"></div>
+                <div class="tiffin"><i class="fa-solid fa-bowl-food"></i><span>DabbaCartel</span></div>
+            </div>
+        </section>
+
+        <section class="dashboard-grid">
+
+            <div class="dashboard-card recent-listings">
+
+                <div class="card-header">
+
+                    <h2>Recent Food Listings</h2>
+
+                    <a href="../mylisting/my-listings.html">View All</a>
+
+                </div>
+
+
+                <div class="empty-listing">
+
+                    <div class="plus-circle">
+                        <i class="fa-solid fa-plus"></i>
+                    </div>
+
+                    <h3>List New Food</h3>
+
+                </div>
+
+            </div>
+
+
+            <div class="dashboard-card nearby-requests">
+
+                <div class="card-header">
+
+                    <h2>Nearby Requests</h2>
+
+                    <a href="../mybooking/mybookings.html">View Requests</a>
+
+                </div>
+
+
+                <div class="map-container">
+
+                    <div class="map-placeholder">
+
+                        <i class="fa-solid fa-map-location-dot"></i>
+
+                        <span>Nearby Requests</span>
+
+                    </div>
+
+                </div>
+
+
+                <div class="request-item">
+
+                    <div class="ngo-icon">
+                        <i class="fa-solid fa-location-dot"></i>
+                    </div>
+
+                    <div class="ngo-details">
+
+                        <h3>PROUDINDIAN</h3>
+
+                        <p>NGO</p>
+
+                        <span>⭐ 4.8 (108)</span>
+
+                    </div>
+
+                    <div class="request-right">
+
+                        <p>2.8 km away</p>
+
+                        <button>View Request</button>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <div class="dashboard-card recent-activity">
+
+                <div class="card-header">
+
+                    <h2>Recent Activity</h2>
+
+                    <a href="../mybooking/mybookings.html">View All</a>
+
+                </div>
+
+
+                <div class="activity-empty">
+
+                    <i class="fa-regular fa-clock"></i>
+
+                    <p>No recent activity</p>
+
+                </div>
+
+            </div>
+
+
+            <div class="dashboard-card quick-actions">
+
+                <div class="card-header">
+
+                    <h2>Quick Actions</h2>
+
+                </div>
+
+
+                <div class="actions-grid">
+
+                    <a href="../listfood/listfood.html" class="action">
+
+                        <div class="action-icon green">
+                            <i class="fa-solid fa-circle-plus"></i>
+                        </div>
+
+                        <span>List Food</span>
+
+                    </a>
+
+
+                    <a href="../mybooking/mybookings.html" class="action">
+
+                        <div class="action-icon blue">
+                            <i class="fa-solid fa-cube"></i>
+                        </div>
+
+                        <span>My Bookings</span>
+
+                    </a>
+
+
+                    <a href="../messages/messages.html" class="action">
+
+                        <div class="action-icon light-blue">
+                            <i class="fa-regular fa-comment"></i>
+                        </div>
+
+                        <span>Messages</span>
+
+                    </a>
+
+
+                    <a href="../mylisting/my-listings.html" class="action">
+
+                        <div class="action-icon green">
+                            <i class="fa-solid fa-chart-column"></i>
+                        </div>
+
+                        <span>My Listings</span>
+
+                    </a>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <section class="bottom-banner">
+
+            <div>
+
+                <h2>
+                    Be a hero. Share food. Spread smiles.
+                </h2>
+
+                <p>
+                    Your small action can bring a big change.
+                </p>
+
+            </div>
+
+
+            <a href="../listfood/listfood.html" class="list-food-button">
+
+                List Food Now
+
+                <i class="fa-solid fa-arrow-right"></i>
+
+            </a>
+
+        </section>
+
+
+    </main>
+
+    <script src="../shared-layout.js"></script>
+
+    <script src="../app.js"></script>
+</body>
+</html>

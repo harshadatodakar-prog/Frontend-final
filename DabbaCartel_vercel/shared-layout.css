@@ -1,0 +1,224 @@
+/* DabbaCartel shared shell. Loaded after each page stylesheet. */
+:root {
+    --dc-sidebar: 270px;
+    --dc-page-pad: 30px;
+    --dc-green: #929c05;
+    --dc-green-dark: #536d1f;
+    --dc-black: #000;
+}
+
+* { box-sizing: border-box; }
+
+body {
+    margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.sidebar {
+    position: fixed !important;
+    left: 0 !important;
+    top: 0 !important;
+    width: var(--dc-sidebar) !important;
+    height: 100vh !important;
+    min-height: 100vh;
+    z-index: 1000;
+    display: flex;
+    flex-direction: column;
+    overflow-y: auto;
+    background: linear-gradient(180deg, #000 0%, #1a1a1a 100%) !important;
+    color: #fff;
+    padding: 25px 18px !important;
+    transform: translateX(0);
+    transition: transform .28s ease, width .28s ease;
+}
+
+.sidebar .logo-section {
+    display: flex !important;
+    align-items: center !important;
+    gap: 10px !important;
+    width: 100%;
+    min-height: 80px;
+    margin: 0 0 35px !important;
+    padding: 0 10px !important;
+    flex-shrink: 0;
+}
+
+.sidebar .logo-icon {
+    width: 55px !important;
+    height: 55px !important;
+    flex: 0 0 55px !important;
+    display: flex !important;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    border-radius: 12px;
+    background: transparent;
+}
+
+.sidebar .logo-icon img {
+    width: 55px !important;
+    height: 55px !important;
+    object-fit: cover;
+    display: block;
+    border-radius: 12px;
+}
+
+.sidebar .logo-section h2 {
+    margin: 0 0 3px !important;
+    font-size: 23px !important;
+    line-height: 1.1;
+    color: #fff !important;
+    white-space: nowrap;
+}
+
+.sidebar .logo-section p {
+    margin: 0 !important;
+    font-size: 12px !important;
+    line-height: 1.25;
+    color: #e7e7e7 !important;
+    white-space: nowrap;
+}
+
+.sidebar .sidebar-menu {
+    display: flex !important;
+    flex-direction: column !important;
+    gap: 5px !important;
+    width: 100%;
+}
+
+.sidebar .menu-item {
+    display: flex !important;
+    align-items: center !important;
+    gap: 16px !important;
+    width: 100%;
+    min-height: 46px;
+    padding: 12px !important;
+    border-radius: 10px !important;
+    color: #fff !important;
+    text-decoration: none !important;
+    font-size: 16px !important;
+    transition: background .2s ease, color .2s ease;
+}
+
+.sidebar .menu-item i {
+    width: 20px !important;
+    flex: 0 0 20px;
+    text-align: center;
+    font-size: 19px !important;
+}
+
+.sidebar .menu-item:hover {
+    background: rgba(255,255,255,.10) !important;
+}
+
+.sidebar .menu-item.active {
+    background: var(--dc-green) !important;
+    color: #fff !important;
+}
+
+.sidebar .menu-item.logout {
+    margin-top: 20px !important;
+}
+
+.main-content {
+    margin-left: var(--dc-sidebar) !important;
+    min-height: 100vh;
+    padding: 20px var(--dc-page-pad) 50px !important;
+    width: auto;
+    transition: margin-left .28s ease, padding .28s ease;
+}
+
+.topbar {
+    height: 70px !important;
+    width: 100%;
+    display: flex !important;
+    align-items: center !important;
+    justify-content: space-between !important;
+    margin: 0 0 15px !important;
+    padding: 0 !important;
+}
+
+.welcome-section {
+    display: flex !important;
+    align-items: center !important;
+    gap: 20px !important;
+}
+
+.menu-button {
+    border: none !important;
+    background: transparent !important;
+    font-size: 25px !important;
+    cursor: pointer;
+    color: #222 !important;
+    padding: 0 !important;
+}
+
+.welcome-section h1 {
+    margin: 0 0 3px !important;
+    font-size: 20px !important;
+    font-weight: 500 !important;
+}
+
+.welcome-section p {
+    margin: 0 !important;
+    font-size: 12px !important;
+    color: #333 !important;
+}
+
+.topbar-right {
+    display: flex !important;
+    align-items: center !important;
+    gap: 25px !important;
+}
+
+.notification {
+    font-size: 23px !important;
+    cursor: pointer;
+}
+
+.profile-image {
+    width: 35px !important;
+    height: 35px !important;
+    border-radius: 50% !important;
+    background: #333 !important;
+    color: #fff !important;
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    overflow: hidden;
+}
+
+.sidebar.sidebar-hidden,
+.sidebar.sidebar-hidden {
+    transform: translateX(-100%) !important;
+}
+.sidebar.show {
+    transform: translateX(0) !important;
+}
+body.sidebar-collapsed .sidebar {
+    transform: translateX(-100%) !important;
+}
+
+body.sidebar-collapsed .main-content {
+    margin-left: 0 !important;
+}
+
+@media (max-width: 700px) {
+    .sidebar {
+        transform: translateX(-100%);
+    }
+    .sidebar.show,
+    body:not(.sidebar-collapsed) .sidebar.show {
+        transform: translateX(0);
+    }
+    .main-content {
+        margin-left: 0 !important;
+        padding: 20px 15px 40px !important;
+    }
+    .topbar {
+        height: 65px !important;
+    }
+    .topbar-right {
+        gap: 12px !important;
+    }
+}

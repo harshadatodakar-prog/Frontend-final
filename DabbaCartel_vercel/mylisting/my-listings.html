@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <title>My Listings - DabbaCartel</title>
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet"
+          href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="my-listings.css">
+
+    <link rel="stylesheet" href="../shared-layout.css">
+</head>
+
+<body>
+
+
+<!-- ================= SIDEBAR ================= -->
+
+<aside class="sidebar">
+    <div class="logo-section">
+        <div class="logo-icon">
+            <img src="../logo.svg" alt="DabbaCartel Logo">
+        </div>
+        <div>
+            <h2>DabbaCartel</h2>
+            <p>No food waste, Just Goodness</p>
+        </div>
+    </div>
+    <nav class="sidebar-menu">
+        <a href="../Dashboard/dashboard.html" class="menu-item">
+            <i class="fa-solid fa-house"></i>
+            <span>Dashboard</span>
+        </a>
+        <a href="../listfood/listfood.html" class="menu-item">
+            <i class="fa-solid fa-circle-plus"></i>
+            <span>List food</span>
+        </a>
+        <a href="../mylisting/my-listings.html" class="menu-item active">
+            <i class="fa-solid fa-cube"></i>
+            <span>My Listings</span>
+        </a>
+        <a href="../mybooking/mybookings.html" class="menu-item">
+            <i class="fa-solid fa-box-open"></i>
+            <span>My Bookings</span>
+        </a>
+        <a href="../messages/messages.html" class="menu-item">
+            <i class="fa-regular fa-comment"></i>
+            <span>Messages</span>
+        </a>
+        <a href="../profile/profile.html" class="menu-item">
+            <i class="fa-regular fa-user"></i>
+            <span>Profile</span>
+        </a>
+        <a href="#logout" class="menu-item logout">
+            <i class="fa-solid fa-right-from-bracket"></i>
+            <span>Logout</span>
+        </a>
+    </nav>
+</aside>
+
+
+
+<!-- ================= MAIN CONTENT ================= -->
+
+<main class="main-content">
+
+
+    <!-- TOP BAR -->
+
+    <header class="topbar">
+    <div class="welcome-section">
+        <button class="menu-button" type="button" aria-label="Toggle navigation">
+            <i class="fa-solid fa-bars"></i>
+        </button>
+        <div>
+            <h1>My Listings</h1>
+            <p>Manage all your Food Listing</p>
+        </div>
+    </div>
+    <div class="topbar-right">
+        <div class="notification">
+            <i class="fa-regular fa-bell"></i>
+        </div>
+        <div class="profile-image">
+            <i class="fa-solid fa-user"></i>
+        </div>
+    </div>
+</header>
+
+
+
+    <!-- ================= TABS ================= -->
+
+    <div class="listing-tabs">
+
+        <button class="tab active"
+                data-tab="active">
+
+            Active
+            <span>(3)</span>
+
+        </button>
+
+
+        <button class="tab"
+                data-tab="completed">
+
+            Completed
+            <span>(8)</span>
+
+        </button>
+
+
+        <button class="tab"
+                data-tab="cancelled">
+
+            Cancelled
+            <span>(2)</span>
+
+        </button>
+
+    </div>
+
+
+
+  
+
+     
+
+               
+
+           
+
+
+
+    <!-- ================= BOTTOM MESSAGE ================= -->
+
+    <section class="bottom-message">
+
+        <h2>
+            Keep sharing, keep spreading smiles!
+        </h2>
+
+        <p>
+            Your listing helps provide meals to those in need.
+        </p>
+
+    </section>
+
+
+</main>
+
+
+<!-- JavaScript -->
+
+<script src="my-listings.js"></script>
+
+<script src="../app.js"></script>
+</body>
+
+</html>
